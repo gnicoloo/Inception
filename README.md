@@ -94,9 +94,4 @@ Specifica qui la licenza scelta (es. MIT, GPL-3.0). Se non è presente, aggiungi
 **Contatti**
 - Autore: nicologiuseppe87@gmail.com gnicoloo.
 
----
-Se vuoi, posso:
-- personalizzare il README con il nome esatto del repository e il link remoto;
-- aggiungere badge (build, license, docker image) e screenshot;
-- tradurlo in inglese o affinare la sezione operativa per ambienti specifici.
 # Inception
