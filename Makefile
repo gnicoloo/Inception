@@ -2,16 +2,20 @@
 
 DOCKER_COMPOSE = docker compose -f srcs/docker-compose.yaml
 WORDPRESS_DIR = /home/gnicolo/data/wordpress
+MARIADB_DIR = /home/gnicolo/data/mariadb
+
 
 .PHONY: up down prepare clean show reset rebuild reset-full fix-perms
 
 # Prepara la directory di WordPress
 prepare:
-	@echo "⚡ Preparazione ambiente WordPress..."
+	@echo "⚡ Preparazione ambiente..."
 	mkdir -p $(WORDPRESS_DIR)
+	mkdir -p $(MARIADB_DIR)
 	sudo chown -R 1000:1000 $(WORDPRESS_DIR)
+	sudo chown -R 1000:1000 $(MARIADB_DIR)
 	sudo chmod -R 755 $(WORDPRESS_DIR)
-	sudo rm -f $(WORDPRESS_DIR)/wp-config.php
+	sudo chmod -R 755 $(MARIADB_DIR)
 
 # Avvia stack Docker in background (detached)
 up: prepare
