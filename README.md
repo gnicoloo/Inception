@@ -92,7 +92,7 @@ Nota: nel `Makefile` la variabile `WORDPRESS_DIR` punta a `/home/gnicolo/data/wo
 Specifica qui la licenza scelta (es. MIT, GPL-3.0). Se non è presente, aggiungi un file `LICENSE` con la licenza desiderata.
 
 **Contatti**
-- Autore: aggiungi nome e contatto (email / GitHub profile).
+- Autore: nicologiuseppe87@gmail.com gnicoloo.
 
 ---
 Se vuoi, posso:
