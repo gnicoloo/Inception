@@ -51,7 +51,9 @@ if ! ./wp-cli.phar core is-installed --allow-root; then
         --admin_password="${WORDPRESS_ADMIN_PASSWORD}" \
         --admin_email="${WORDPRESS_ADMIN_EMAIL}" \
         --allow-root
-
+    echo "Configuring dynamic URL for any port..."
+    echo "define( 'WP_HOME', 'https://' . \$_SERVER['HTTP_HOST'] );" >> wp-config.php
+    echo "define( 'WP_SITEURL', 'https://' . \$_SERVER['HTTP_HOST'] );" >> wp-config.php
     echo "🟢 WordPress installed successfully"
 # Crea utente WordPress secondario se non esiste
      if ! ./wp-cli.phar user get "${WORDPRESS_USER}" --allow-root >/dev/null 2>&1; then
